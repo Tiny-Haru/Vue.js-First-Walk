@@ -34,6 +34,11 @@
             <li v-for="n in list">{{ n }}</li>
         </ul>
     </div>
+    <div id = "app7">
+        <span v-if="id==1">값이 1입니다.</span>
+        <span v-else-if="id==2">값이 2입니다.</span>
+        <span v-else>1도, 2도 아닙니다.</span>
+    </div>
 
     <script>
         //Vue.js 스크립트
@@ -93,6 +98,13 @@
             el: '#app6',
             data: {
                 list: ["Vue.js", "React.js", "Polymer.js", "Google", "Hanbit"]
+            }
+        });
+
+        let app7 = new Vue({
+            el: '#app7',
+            data: {
+                id: 1
             }
         });
     </script>
